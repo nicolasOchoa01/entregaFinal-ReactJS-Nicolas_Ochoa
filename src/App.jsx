@@ -7,9 +7,8 @@ import { ItemListContainer } from "./components/ItemListContainer/ItemListContai
 import { CartProvider } from "./context/CartContext/CartProvider";
 import { Cart } from "./components/Cart/Cart";
 import { ProductFormContainer } from "./components/adminComponents/ProductFormContainer/ProductFormContainer";
-import { MainLayout } from "./layouts/Mainlayout";
-import { AdminLayout } from "./layouts/Adminlayout";
-
+import { MainLayout } from "./layouts/MainLayout_TEMP";
+import { AdminLayout } from "./layouts/AdminLayout_TEMP";
 import { RutaProtegida } from "./components/RutaProtegida/RutaProtegida";
 import { Login } from "./components/Login/Login";
 //correccion
