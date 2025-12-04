@@ -9,9 +9,10 @@ import { Cart } from "./components/Cart/Cart";
 import { ProductFormContainer } from "./components/adminComponents/ProductFormContainer/ProductFormContainer";
 import { MainLayout } from "./layouts/Mainlayout";
 import { AdminLayout } from "./layouts/Adminlayout";
+
 import { RutaProtegida } from "./components/RutaProtegida/RutaProtegida";
 import { Login } from "./components/Login/Login";
-
+//correccion
 function App() {
   return (
     <>
