@@ -1,4 +1,45 @@
-.container h1 {
+.item-list-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #868686;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   text-align: center;
-  padding: 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.items{
+    display: flex;
+    flex-direction: row;
+}
+.item-list-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.item-list-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #ff7b00;
+  border-radius: 2px;
+}
+
+.item-list-container > *:not(:first-child) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
 }

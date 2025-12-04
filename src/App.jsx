@@ -7,6 +7,10 @@ import { ItemListContainer } from "./components/ItemListContainer/ItemListContai
 import { CartProvider } from "./context/CartContext/CartProvider";
 import { Cart } from "./components/Cart/Cart";
 import { ProductFormContainer } from "./components/adminComponents/ProductFormContainer/ProductFormContainer";
+import { MainLayout } from "./layouts/Mainlayout";
+import { AdminLayout } from "./layouts/Adminlayout";
+import { RutaProtegida } from "./components/RutaProtegida/RutaProtegida";
+import { Login } from "./components/Login/Login";
 
 function App() {
   return (
@@ -16,17 +20,30 @@ function App() {
           <Header />
           {/* Dejamos fuera del Routes lo que queremos que no se vuelva a renderizar al navegar */}
           <Routes>
-            <Route
-              path="/"
-              element={<ItemListContainer titulo={"Bienvenidos"} />}
-            />
-            <Route
-              path="/category/:category"
-              element={<ItemListContainer titulo={"Bienvenidos"} />}
-            />
-            <Route path="/detail/:id" element={<ItemDetailContainer />} />
-            <Route path="/carrito" element={<Cart />} />
-            <Route path="/admin" element={<ProductFormContainer />} />
+            <Route element={<MainLayout />}>
+              <Route
+                path="/"
+                element={<ItemListContainer titulo={"Bienvenidos"} />}
+              />
+              <Route
+                path="/category/:category"
+                element={<ItemListContainer titulo={"Bienvenidos"} />}
+              />
+              <Route path="/detail/:id" element={<ItemDetailContainer />} />
+              <Route path="/carrito" element={<Cart />} />
+            </Route>
+
+            <Route path="/admin" element={<AdminLayout/>}>
+              <Route index element={<Login/>} />
+              <Route
+                path="alta-productos"
+                element={
+                  <RutaProtegida>
+                    <ProductFormContainer/>
+                  </RutaProtegida>
+                }
+              />
+            </Route>
           </Routes>
           {/* Dejamos fuera del Routes lo que queremos que no se vuelva a renderizar al navegar */}
           <Footer />

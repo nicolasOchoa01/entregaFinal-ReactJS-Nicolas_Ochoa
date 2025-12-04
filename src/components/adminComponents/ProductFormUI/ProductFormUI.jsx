@@ -1,3 +1,5 @@
+import './ProductFormUI.css';
+
 export const ProductFormUI = ({
   product,
   errors,
@@ -7,7 +9,7 @@ export const ProductFormUI = ({
   onSubmit,
 }) => {
   return (
-    <section>
+    <section className='product-section'>
       <form className="product-form" onSubmit={onSubmit}>
         <h2>Agregar producto</h2>
         <div>

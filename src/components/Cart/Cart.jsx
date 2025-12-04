@@ -8,7 +8,7 @@ export const Cart = () => {
   const { cart, clearCart, deleteItem, total, checkout } = useCartContext();
 
   return (
-    <section className="item-list-container">
+    <section className="item-list-container-cart">
       <h2>Carrito de compras</h2>
 
       {cart.length ? (
